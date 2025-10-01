@@ -1,0 +1,27 @@
+.vaar-button {
+  background: var(--vaar-color-grey);
+  margin: var(--vaar-size-xsmall);
+  padding: var(--vaar-size-base) var(--vaar-size-large);
+  border-radius: var(--vaar-size-small);
+  border: 1px solid transparent;
+  font-size: var(--vaar-font-size);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.vaar-button-primary {
+  background: var(--vaar-color-orange);
+}
+
+.vaar-button:hover {
+  border-color: var(--vaar-color-orange-dark);
+}
+
+.vaar-button-primary:hover {
+  border-color: var(--vaar-color-orange-darker);
+}
+
+.vaar-button:focus,
+.vaar-button:focus-visible {
+  outline: 4px auto;
+}
