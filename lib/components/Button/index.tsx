@@ -4,6 +4,7 @@ import "./button.css";
 export type ButtonProps = {
   variant?: "primary";
   children?: React.ReactNode;
+  onClick?: () => void;
 };
 
 export function VButton(props: ButtonProps) {
@@ -13,5 +14,9 @@ export function VButton(props: ButtonProps) {
     className += " vaar-button-primary";
   }
 
-  return <button className={className}>{props.children}</button>;
+  return (
+    <button className={className} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 }

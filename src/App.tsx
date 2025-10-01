@@ -15,9 +15,9 @@ function App() {
       <VButton>Normal Btn</VButton>
 
       <VPanel>
-        <button onClick={() => setCount((count) => count + 1)}>
+        <VButton onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </VButton>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
