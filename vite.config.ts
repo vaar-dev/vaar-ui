@@ -14,12 +14,12 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
-      name: "VaarUi",
-      fileName: (format) => `vaar-ui.${format}.js`,
+      formats: ["es"],
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
       output: {
+        entryFileNames: "[name].js",
         globals: {
           react: "React",
           "react-dom": "ReactDOM",

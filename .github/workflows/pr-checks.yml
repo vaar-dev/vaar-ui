@@ -1,4 +1,4 @@
-name: pr-checks.yml
+name: PR Checks
 on:
   pull_request:
     types: [opened, synchronize, reopened]
