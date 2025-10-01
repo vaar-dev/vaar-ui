@@ -5,6 +5,8 @@
   --vaar-color-orange-dark: #ea7c51;
   --vaar-color-orange-darker: #b8552a;
   --vaar-color-grey: #ddd;
+  --vaar-color-white: #fff;
+  --vaar-main-bg-color: #fff0df;
 
   --vaar-size-base: 8px;
   --vaar-font-size: calc(var(--vaar-size-base) * 1.8);
@@ -17,8 +19,13 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
+  background: var(--vaar-main-bg-color);
 }
