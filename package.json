@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b ./tsconfig.lib.json && vite build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier:format": "prettier . --write",
+    "prettier:check": "prettier . --check"
   },
   "dependencies": {
     "react": "^19.1.1",
