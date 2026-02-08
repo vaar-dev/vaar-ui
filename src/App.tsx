@@ -3,6 +3,7 @@ import "./App.css";
 import { VButton } from "../lib/components/Button";
 import "../lib/root.css";
 import { VPanel } from "../lib/components/Panel";
+import { VBadge } from "../lib/components/Badge";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,12 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+      </VPanel>
+
+      <VPanel>
+        <VBadge>Normal badge</VBadge>
+        <VBadge variant="primary">Primary badge</VBadge>
+        <VBadge>Something</VBadge>
       </VPanel>
     </>
   );

@@ -1,0 +1,12 @@
+.vaar-badge {
+  background: var(--vaar-color-grey);
+  display: inline-block;
+  margin: var(--vaar-size-xsmall);
+  padding: var(--vaar-size-small) var(--vaar-size-base);
+  border-radius: var(--vaar-font-size-small);
+  font-size: var(--vaar-font-size-small);
+}
+
+.vaar-badge-primary {
+  background: var(--vaar-color-orange);
+}

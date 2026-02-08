@@ -10,6 +10,7 @@
 
   --vaar-size-base: 8px;
   --vaar-font-size: calc(var(--vaar-size-base) * 1.8);
+  --vaar-font-size-small: calc(var(--vaar-size-base) * 1.4);
   --vaar-size-small: calc(var(--vaar-size-base) / 2);
   --vaar-size-large: calc(var(--vaar-size-base) * 2);
   --vaar-size-xsmall: calc(var(--vaar-size-small) / 2);
