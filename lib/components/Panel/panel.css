@@ -1,6 +1,7 @@
 .vaar-panel {
   background: var(--vaar-color-white);
   padding: var(--vaar-size-large);
+  margin: var(--vaar-size-large);
   box-sizing: border-box;
   border-radius: var(--vaar-size-base);
   box-shadow:
