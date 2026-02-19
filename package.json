@@ -13,6 +13,9 @@
     "prettier:format": "prettier . --write",
     "prettier:check": "prettier . --check"
   },
+  "dependencies": {
+    "lucide-react": "0.574.0"
+  },
   "devDependencies": {
     "@eslint/js": "9.36.0",
     "@types/react": "19.2.13",

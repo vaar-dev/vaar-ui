@@ -2,6 +2,7 @@ import { type ReactNode, useState } from "react";
 import "./App.css";
 import { VButton, VPanel, VBadge, type TableColumn, VTable } from "../lib";
 import "../lib/root.css";
+import { VDialog } from "../lib/components/Dialog";
 
 type TestTableData = {
   id: string;
@@ -9,8 +10,22 @@ type TestTableData = {
   value: string;
 };
 
+const columns: TableColumn<TestTableData>[] = [
+  {
+    columnId: "name",
+    name: "Name",
+    cellBuilder: (rowData: TestTableData): ReactNode => rowData.name,
+  },
+  {
+    columnId: "value",
+    name: "Value",
+    cellBuilder: (rowData: TestTableData): ReactNode => rowData.value,
+  },
+];
+
 function App() {
   const [count, setCount] = useState(0);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const tableData: TestTableData[] = [
     {
@@ -35,19 +50,6 @@ function App() {
     },
   ];
 
-  const columns: TableColumn<TestTableData>[] = [
-    {
-      columnId: "name",
-      name: "Name",
-      cellBuilder: (rowData: TestTableData): ReactNode => rowData.name,
-    },
-    {
-      columnId: "value",
-      name: "Value",
-      cellBuilder: (rowData: TestTableData): ReactNode => rowData.value,
-    },
-  ];
-
   return (
     <>
       <img src="/vaar.svg" alt="vaar logo" height="40px" />
@@ -59,9 +61,23 @@ function App() {
         <VButton onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </VButton>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+
+        <VButton onClick={() => setIsDialogOpen(!isDialogOpen)}>
+          Toggle Dialog
+        </VButton>
+
+        <VDialog
+          isOpen={isDialogOpen}
+          setIsOpen={(isOpen) => setIsDialogOpen(isOpen)}
+          title="Hello World"
+          showCloseButton
+        >
+          <p>
+            This is the main dialog content. This would normally be filled in
+            with some useful stuff. But for now this is just some random
+            placeholder content.
+          </p>
+        </VDialog>
       </VPanel>
 
       <VPanel>

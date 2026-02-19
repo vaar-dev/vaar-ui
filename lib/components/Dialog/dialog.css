@@ -1,0 +1,26 @@
+.vaar-dialog-header {
+  margin-bottom: var(--vaar-size-base);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.vaar-dialog {
+  max-width: 480px;
+  width: 100%;
+}
+
+.vaar-dialog-portal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--vaar-portal-bg-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
