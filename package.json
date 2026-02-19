@@ -4,7 +4,7 @@
   "version": "0.4.1",
   "type": "module",
   "repository": {
-    "url": "https://github.com/vaar-dev/vaar-ui"
+    "url": "git+https://github.com/vaar-dev/vaar-ui.git"
   },
   "scripts": {
     "dev": "vite",
