@@ -1,0 +1,24 @@
+.vaar-table-container {
+  background: var(--vaar-color-grey-light);
+  border-radius: var(--vaar-size-small);
+  padding: var(--vaar-size-small);
+}
+
+.vaar-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vaar-table-container table td,
+.vaar-table-container table th {
+  padding: var(--vaar-size-base);
+  border: 1px solid var(--vaar-color-grey-light);
+}
+
+.vaar-table-container table thead th {
+  text-align: left;
+}
+
+.vaar-table-container tbody tr {
+  background: var(--vaar-color-white);
+}

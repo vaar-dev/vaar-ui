@@ -1,12 +1,52 @@
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import "./App.css";
-import { VButton } from "../lib/components/Button";
+import { VButton, VPanel, VBadge, type TableColumn, VTable } from "../lib";
 import "../lib/root.css";
-import { VPanel } from "../lib/components/Panel";
-import { VBadge } from "../lib/components/Badge";
+
+type TestTableData = {
+  id: string;
+  name: string;
+  value: string;
+};
 
 function App() {
   const [count, setCount] = useState(0);
+
+  const tableData: TestTableData[] = [
+    {
+      id: "id-1",
+      name: "First item",
+      value: "This is a test value",
+    },
+    {
+      id: "id-2",
+      name: "Second item",
+      value: "This is a test value",
+    },
+    {
+      id: "id-3",
+      name: "Third item",
+      value: "This is a test value",
+    },
+    {
+      id: "id-4",
+      name: "Fourth item",
+      value: "This is a test value",
+    },
+  ];
+
+  const columns: TableColumn<TestTableData> = [
+    {
+      columnId: "name",
+      name: "Name",
+      cellBuilder: (rowData: TestTableData): ReactNode => rowData.name,
+    },
+    {
+      columnId: "value",
+      name: "Value",
+      cellBuilder: (rowData: TestTableData): ReactNode => rowData.value,
+    },
+  ];
 
   return (
     <>
@@ -28,6 +68,10 @@ function App() {
         <VBadge>Normal badge</VBadge>
         <VBadge variant="primary">Primary badge</VBadge>
         <VBadge>Something</VBadge>
+      </VPanel>
+
+      <VPanel>
+        <VTable data={tableData} dataId="id" columns={columns} />
       </VPanel>
     </>
   );
