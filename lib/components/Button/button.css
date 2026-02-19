@@ -25,3 +25,16 @@
 .vaar-button:focus-visible {
   outline: 4px auto;
 }
+
+.vaar-button-small {
+  padding: var(--vaar-size-small) var(--vaar-size-small);
+}
+
+.vaar-button-icon {
+  font-size: 0;
+}
+
+.vaar-button-icon svg {
+  width: var(--vaar-font-size);
+  height: var(--vaar-font-size);
+}
