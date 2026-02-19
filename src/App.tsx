@@ -35,7 +35,7 @@ function App() {
     },
   ];
 
-  const columns: TableColumn<TestTableData> = [
+  const columns: TableColumn<TestTableData>[] = [
     {
       columnId: "name",
       name: "Name",
