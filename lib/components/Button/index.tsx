@@ -1,9 +1,10 @@
-import * as React from "react";
+import { type ReactNode } from "react";
 import "./button.css";
 
 export type ButtonProps = {
   variant?: "primary";
-  children?: React.ReactNode;
+  size?: "small" | "small-icon" | "icon";
+  children?: ReactNode;
   onClick?: () => void;
 };
 
@@ -12,6 +13,14 @@ export function VButton(props: ButtonProps) {
 
   if (props.variant === "primary") {
     className += " vaar-button-primary";
+  }
+
+  if (props.size === "small") {
+    className += " vaar-button-small";
+  } else if (props.size === "small-icon") {
+    className += " vaar-button-small vaar-button-icon";
+  } else if (props.size === "icon") {
+    className += " vaar-button-icon";
   }
 
   return (
