@@ -7,12 +7,12 @@ import { globalIgnores } from "eslint/config";
 
 export default tseslint.config([
   globalIgnores(["dist"]),
+  reactHooks.configs.flat["recommended-latest"],
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
-      reactHooks.configs["recommended-latest"],
       reactRefresh.configs.vite,
     ],
     languageOptions: {
