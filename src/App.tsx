@@ -1,8 +1,14 @@
 import { type ReactNode, useState } from "react";
 import "./App.css";
-import { VButton, VPanel, VBadge, type TableColumn, VTable } from "../lib";
+import {
+  VDialog,
+  VButton,
+  VPanel,
+  VBadge,
+  type TableColumn,
+  VTable,
+} from "../lib";
 import "../lib/root.css";
-import { VDialog } from "../lib/components/Dialog";
 
 type TestTableData = {
   id: string;
