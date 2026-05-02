@@ -1,7 +1,7 @@
 {
   "name": "@vaardev/ui",
   "license": "MIT",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "type": "module",
   "repository": {
     "url": "git+https://github.com/vaar-dev/vaar-ui.git"
