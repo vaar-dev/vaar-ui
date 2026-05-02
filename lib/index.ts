@@ -1,7 +1,7 @@
 import "./root.css";
 
-export * from "./components/Button";
-export * from "./components/Panel";
-export * from "./components/Badge";
-export * from "./components/Table";
-export * from "./components/Dialog";
+export * from "./components/button";
+export * from "./components/panel";
+export * from "./components/badge";
+export * from "./components/table";
+export * from "./components/dialog";

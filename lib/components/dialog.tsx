@@ -1,5 +1,5 @@
 import "./dialog.css";
-import { VButton } from "../Button";
+import { VButton } from "./button";
 import type { ReactNode } from "react";
 import { X } from "lucide-react";
 
