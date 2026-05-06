@@ -8,7 +8,7 @@ export type ButtonProps = {
   onClick?: () => void;
 };
 
-export function VButton(props: ButtonProps) {
+export function Button(props: ButtonProps) {
   let className = "vaar-button";
 
   if (props.variant === "primary") {

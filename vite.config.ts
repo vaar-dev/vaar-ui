@@ -2,18 +2,20 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import dts from "unplugin-dts/vite";
+import { fileMapping } from "./fileMapping.ts";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     dts({
+      entryRoot: resolve(__dirname, "lib"),
       tsconfigPath: resolve(__dirname, "tsconfig.lib.json"),
     }),
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, "lib/index.ts"),
+      entry: fileMapping,
       formats: ["es"],
     },
     rollupOptions: {

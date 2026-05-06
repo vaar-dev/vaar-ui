@@ -1,7 +1,7 @@
 {
   "name": "@vaardev/ui",
   "license": "MIT",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "type": "module",
   "repository": {
     "url": "git+https://github.com/vaar-dev/vaar-ui.git"
@@ -18,9 +18,9 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@types/node": "^25.6.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@types/node": "25.6.0",
     "@vitejs/plugin-react": "6.0.1",
     "eslint": "10.3.0",
     "eslint-plugin-react-hooks": "7.1.1",
@@ -30,7 +30,7 @@
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.1",
+    "typescript-eslint": "8.59.2",
     "unplugin-dts": "1.0.0",
     "vite": "8.0.10"
   },

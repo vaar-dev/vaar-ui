@@ -37,7 +37,7 @@ function buildRows<TData>(
   });
 }
 
-export function VTable<TData>(props: TableProps<TData>) {
+export function Table<TData>(props: TableProps<TData>) {
   const headerCells = buildHeader(props.columns);
   const tableRows = buildRows(props.data, props.dataId, props.columns);
   return (
