@@ -5,6 +5,6 @@ export type PanelProps = {
   children?: React.ReactNode;
 };
 
-export function VPanel(props: PanelProps) {
+export function Panel(props: PanelProps) {
   return <div className="vaar-panel">{props.children}</div>;
 }

@@ -6,7 +6,7 @@ export type BadgeProps = {
   children?: React.ReactNode;
 };
 
-export function VBadge(props: BadgeProps) {
+export function Badge(props: BadgeProps) {
   let className = "vaar-badge";
 
   if (props.variant === "primary") {

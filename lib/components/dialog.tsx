@@ -1,5 +1,5 @@
 import "./dialog.css";
-import { VButton } from "./button";
+import { Button } from "./button";
 import type { ReactNode } from "react";
 import { X } from "lucide-react";
 
@@ -13,7 +13,7 @@ type DialogProps = {
 
 function noOp() {}
 
-export function VDialog(props: DialogProps) {
+export function Dialog(props: DialogProps) {
   if (props.isOpen != true) {
     return null;
   }
@@ -26,9 +26,9 @@ export function VDialog(props: DialogProps) {
       <div className="vaar-dialog-header">
         <span>{props.title}</span>
         {props.showCloseButton && (
-          <VButton onClick={() => setIsOpen(false)} size="small-icon">
+          <Button onClick={() => setIsOpen(false)} size="small-icon">
             <X />
-          </VButton>
+          </Button>
         )}
       </div>
     );
