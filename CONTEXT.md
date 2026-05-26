@@ -24,11 +24,21 @@ _Avoid_: Composite component, compound component
 A form control for text-like input (single-line, multiline, and other HTML input types). Not a generic term for all form controls.
 _Avoid_: Input, text field, form field
 
+**OTP Entry**:
+A specialized form control for one-time password or verification code input. Renders individual character boxes with auto-advance. Supports numeric-only or alphanumeric modes.
+_Avoid_: Code input, pin input, verification input
+
+**Stack**:
+A layout primitive that spaces children equally in a vertical or horizontal direction.
+_Avoid_: Flex container, layout row/column
+
 ## Relationships
 
 - A **Component** references **Tokens** for all visual values — never hardcoded colors or sizes
 - **Tokens** are defined in a **Palette** in `root.css`
 - Form **Components** are **Integrated components** by default
+- **OTP Entry** is a specialization of **Entry** and shares its base CSS styles
+- **Stack** is a layout **Component** used to compose other **Components**
 
 ## Example dialogue
 
