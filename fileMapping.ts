@@ -7,5 +7,6 @@ export const fileMapping: Record<string, string> = {
   "components/dialog": resolve(__dirname, "lib/components/dialog.tsx"),
   "components/entry": resolve(__dirname, "lib/components/entry.tsx"),
   "components/panel": resolve(__dirname, "lib/components/panel.tsx"),
+  "components/stack": resolve(__dirname, "lib/components/stack.tsx"),
   "components/table": resolve(__dirname, "lib/components/table.tsx"),
 };

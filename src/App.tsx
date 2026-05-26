@@ -7,6 +7,7 @@ import { Panel } from "../lib/components/panel";
 import { Table, type TableColumn } from "../lib/components/table";
 import "../lib/root.css";
 import { Entry } from "../lib/components/entry.tsx";
+import { Stack } from "../lib/components/stack.tsx";
 
 type TestTableData = {
   id: string;
@@ -63,24 +64,23 @@ function App() {
       <Button>Normal Btn</Button>
 
       <Panel>
-        <Entry
-          label="My Field"
-          type="text"
-          value={entryValue}
-          onChange={setEntryValue}
-        />
-        <Entry
-          label="My Second Field"
-          type="password"
-        />
-
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-
-        <Button onClick={() => setIsDialogOpen(!isDialogOpen)}>
-          Toggle Dialog
-        </Button>
+        <Stack direction="vertical">
+          <Entry
+            label="My Field"
+            type="text"
+            value={entryValue}
+            onChange={setEntryValue}
+          />
+          <Entry label="My Second Field" type="password" />
+          <Stack direction="horizontal">
+            <Button onClick={() => setCount((count) => count + 1)}>
+              count is {count}
+            </Button>
+            <Button onClick={() => setIsDialogOpen(!isDialogOpen)}>
+              Toggle Dialog
+            </Button>
+          </Stack>
+        </Stack>
 
         <Dialog
           isOpen={isDialogOpen}
