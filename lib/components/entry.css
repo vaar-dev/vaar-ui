@@ -1,19 +1,33 @@
-.vaar-entry label{
+.vaar-entry label {
   margin: var(--vaar-size-xsmall);
 }
 
-.vaar-entry input, .vaar-entry textarea{
+.vaar-entry input,
+.vaar-entry textarea {
   width: 100%;
   box-sizing: border-box;
   padding: var(--vaar-size-base);
   font-size: var(--vaar-font-size);
   font-family: var(--vaar-font-family), sans-serif;
-  outline:none;
+  outline: none;
   border: 2px solid var(--vaar-color-grey-dark);
   border-radius: var(--vaar-size-small);
   margin: var(--vaar-size-xsmall);
 }
 
-.vaar-entry input:focus, .vaar-entry textarea:focus{
+.vaar-entry input:focus,
+.vaar-entry textarea:focus {
   border-color: var(--vaar-color-orange-dark);
+}
+
+.vaar-entry-readonly input,
+.vaar-entry-readonly textarea {
+  background: var(--vaar-color-grey-light);
+  border-color: var(--vaar-color-grey);
+  cursor: default;
+}
+
+.vaar-entry-readonly input:focus,
+.vaar-entry-readonly textarea:focus {
+  border-color: var(--vaar-color-grey);
 }

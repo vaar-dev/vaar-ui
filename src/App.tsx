@@ -72,6 +72,12 @@ function App() {
             onChange={setEntryValue}
           />
           <Entry label="My Second Field" type="password" />
+          <Entry
+            label="Read Only Field"
+            type="text"
+            value="This value cannot be edited"
+            readOnly
+          />
           <Stack direction="horizontal">
             <Button onClick={() => setCount((count) => count + 1)}>
               count is {count}
@@ -81,7 +87,6 @@ function App() {
             </Button>
           </Stack>
         </Stack>
-
         <Dialog
           isOpen={isDialogOpen}
           setIsOpen={(isOpen) => setIsDialogOpen(isOpen)}
