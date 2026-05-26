@@ -6,6 +6,8 @@ export const fileMapping: Record<string, string> = {
   "components/button": resolve(__dirname, "lib/components/button.tsx"),
   "components/dialog": resolve(__dirname, "lib/components/dialog.tsx"),
   "components/entry": resolve(__dirname, "lib/components/entry.tsx"),
+  "components/loader-inline": resolve(__dirname, "lib/components/loader-inline.tsx"),
+  "components/loader-page": resolve(__dirname, "lib/components/loader-page.tsx"),
   "components/otp-entry": resolve(__dirname, "lib/components/otp-entry.tsx"),
   "components/panel": resolve(__dirname, "lib/components/panel.tsx"),
   "components/stack": resolve(__dirname, "lib/components/stack.tsx"),

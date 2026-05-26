@@ -8,6 +8,8 @@ import { Table, type TableColumn } from "../lib/components/table";
 import { Entry } from "../lib/components/entry";
 import { OtpEntry } from "../lib/components/otp-entry";
 import { Stack } from "../lib/components/stack";
+import { LoaderInline } from "../lib/components/loader-inline";
+import { PageLoader } from "../lib/components/loader-page";
 import "../lib/root.css";
 
 type SampleRow = {
@@ -185,6 +187,28 @@ function App() {
           <Badge>Third</Badge>
         </Stack>
       </Panel>
+
+      <h2>Inline Loader</h2>
+      <Panel>
+        <h3>Variants</h3>
+        <div className="variant-row">
+          <LoaderInline />
+          <LoaderInline variant="primary" />
+        </div>
+
+        <h3>In a button</h3>
+        <div className="variant-row">
+          <Button>
+            Saving <LoaderInline />
+          </Button>
+          <Button variant="primary">
+            Saving <LoaderInline variant="primary" />
+          </Button>
+        </div>
+      </Panel>
+
+      <h2>Page Loader</h2>
+      <PageLoader />
 
       <h2>Panel</h2>
       <Panel>
