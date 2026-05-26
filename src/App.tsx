@@ -7,6 +7,7 @@ import { Panel } from "../lib/components/panel";
 import { Table, type TableColumn } from "../lib/components/table";
 import { Entry } from "../lib/components/entry";
 import { OtpEntry } from "../lib/components/otp-entry";
+import { Stack } from "../lib/components/stack";
 import "../lib/root.css";
 
 type SampleRow = {
@@ -166,6 +167,23 @@ function App() {
 
         <h3>Read only</h3>
         <OtpEntry label="Confirmed code" length={6} value="482916" readOnly />
+      </Panel>
+
+      <h2>Stack</h2>
+      <Panel>
+        <h3>Horizontal</h3>
+        <Stack direction="horizontal">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </Stack>
+
+        <h3>Vertical</h3>
+        <Stack direction="vertical">
+          <Badge>First</Badge>
+          <Badge>Second</Badge>
+          <Badge>Third</Badge>
+        </Stack>
       </Panel>
 
       <h2>Panel</h2>
