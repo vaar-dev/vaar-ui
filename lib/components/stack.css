@@ -1,0 +1,12 @@
+.vaar-stack {
+  display: flex;
+  gap: var(--vaar-size-base);
+}
+
+.vaar-stack.stack-vertical {
+  flex-direction: column;
+}
+
+.vaar-stack.stack-horizontal {
+  flex-direction: row;
+}
