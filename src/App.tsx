@@ -6,6 +6,7 @@ import { Dialog } from "../lib/components/dialog";
 import { Panel } from "../lib/components/panel";
 import { Table, type TableColumn } from "../lib/components/table";
 import { Entry } from "../lib/components/entry";
+import { OtpEntry } from "../lib/components/otp-entry";
 import "../lib/root.css";
 
 type SampleRow = {
@@ -48,6 +49,8 @@ function App() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [textValue, setTextValue] = useState("");
   const [multilineValue, setMultilineValue] = useState("");
+  const [otpNumeric, setOtpNumeric] = useState("");
+  const [otpAlpha, setOtpAlpha] = useState("");
 
   return (
     <div className="catalogue">
@@ -140,6 +143,29 @@ function App() {
           value="This multiline value cannot be edited"
           readOnly
         />
+      </Panel>
+
+      <h2>OTP Entry</h2>
+      <Panel>
+        <h3>Numeric (6 digits)</h3>
+        <OtpEntry
+          label="Verification code"
+          length={6}
+          value={otpNumeric}
+          onChange={setOtpNumeric}
+        />
+
+        <h3>Alphanumeric (8 characters)</h3>
+        <OtpEntry
+          label="Recovery code"
+          length={8}
+          mode="alphanumeric"
+          value={otpAlpha}
+          onChange={setOtpAlpha}
+        />
+
+        <h3>Read only</h3>
+        <OtpEntry label="Confirmed code" length={6} value="482916" readOnly />
       </Panel>
 
       <h2>Panel</h2>
