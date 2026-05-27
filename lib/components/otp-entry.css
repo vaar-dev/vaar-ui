@@ -1,0 +1,12 @@
+.vaar-otp-entry-fields {
+  display: flex;
+  gap: var(--vaar-size-small);
+}
+
+.vaar-otp-entry .vaar-otp-entry-fields input {
+  width: calc(
+    var(--vaar-font-size) + var(--vaar-size-large) + var(--vaar-size-base)
+  );
+  text-align: center;
+  padding: var(--vaar-size-base);
+}

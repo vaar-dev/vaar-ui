@@ -1,1 +1,38 @@
 /* This is a place for any demo app specific styling not to go into the library */
+
+.catalogue {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--vaar-size-large);
+}
+
+.catalogue header {
+  display: flex;
+  align-items: center;
+  gap: var(--vaar-size-base);
+  margin-bottom: var(--vaar-size-large);
+}
+
+.catalogue header h1 {
+  margin: 0;
+}
+
+.catalogue h2 {
+  margin-top: var(--vaar-size-large);
+  margin-bottom: var(--vaar-size-small);
+}
+
+.catalogue h3 {
+  font-size: var(--vaar-font-size-small);
+  color: var(--vaar-color-grey-dark);
+  margin-top: var(--vaar-size-base);
+  margin-bottom: var(--vaar-size-small);
+}
+
+.variant-row {
+  display: flex;
+  align-items: center;
+  gap: var(--vaar-size-base);
+  flex-wrap: wrap;
+  margin-bottom: var(--vaar-size-base);
+}
