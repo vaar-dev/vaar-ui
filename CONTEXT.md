@@ -32,6 +32,34 @@ _Avoid_: Code input, pin input, verification input
 A layout primitive that spaces children equally in a vertical or horizontal direction.
 _Avoid_: Flex container, layout row/column
 
+**Badge**:
+A small inline label used to surface a status or category. Supports a primary variant for emphasis.
+_Avoid_: Tag, chip, pill, label
+
+**Table**:
+A data display component generic over its row type. Columns are defined with cell renderer functions, giving consumers full control over cell content.
+_Avoid_: Grid, data grid, list
+
+**Button**:
+An action trigger component. Supports a primary variant, size variants, and an inline loading state via `showLoader` that replaces content with a **Loader**.
+_Avoid_: Action, control, trigger
+
+**Panel**:
+A surface container component providing the visual base (background, border, elevation) for contained UI regions.
+_Avoid_: Card, container, box
+
+**Dialog**:
+A modal overlay component that presents content in a **Panel** surface, centered over a backdrop. Controlled via an `isOpen` prop.
+_Avoid_: Modal, popup, drawer
+
+**Loader**:
+A loading indicator built from an animated **Box Grid**. Configurable by size (`small`, `large`, `button`) and visual variant (`color`, `neutral`, `light`). The `button` size is used internally by **Button**; larger sizes are used standalone.
+_Avoid_: Spinner, loading indicator
+
+**Box Grid**:
+A visualization component that renders a grid of colored boxes, each with an intensity level (1–5). Used as a data visualization primitive and as the animation engine inside **Loader**.
+_Avoid_: Heat map, tile grid
+
 ## Relationships
 
 - A **Component** references **Tokens** for all visual values — never hardcoded colors or sizes
@@ -39,6 +67,9 @@ _Avoid_: Flex container, layout row/column
 - Form **Components** are **Integrated components** by default
 - **OTP Entry** is a specialization of **Entry** and shares its base CSS styles
 - **Stack** is a layout **Component** used to compose other **Components**
+- **Loader** uses **Box Grid** as its animation engine
+- **Dialog** uses **Panel** as its visual surface
+- **Button** embeds a **Loader** when in loading state
 
 ## Example dialogue
 

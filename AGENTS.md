@@ -34,6 +34,8 @@ There are no tests.
 **Component-specific notes:**
 
 - `Dialog` applies the `vaar-panel` CSS class from `panel.css` — if you change `Panel` styles, `Dialog` is affected
+- `Loader` uses `BoxGrid` as its animation engine — if you change `BoxGrid` rendering, `Loader` appearance is affected
+- `Button` embeds `Loader` (size `"button"`) for its loading state — if you change `Loader`'s button-size appearance, `Button` loading state is affected
 - `Table` is generic over the row data type (`Table<TData>`); columns define their own cell renderers via `cellBuilder`
 - `OtpEntry` reuses `vaar-entry` and `vaar-entry-readonly` CSS classes from `entry.css` — if you change `Entry` base styles, `OtpEntry` is affected
 - `lucide-react` is the only runtime dependency (used for icons in `Dialog`)
