@@ -11,6 +11,7 @@ import { Stack } from "../lib/components/stack";
 import { LoaderInline } from "../lib/components/loader-inline";
 import { PageLoader } from "../lib/components/loader-page";
 import "../lib/root.css";
+import { type BoxData, BoxGrid } from "../lib/components/box-grid.tsx";
 
 type SampleRow = {
   id: string;
@@ -47,6 +48,19 @@ const sampleData: SampleRow[] = [
   { id: "3", name: "Project Gamma", status: "Active", value: "$24,800" },
   { id: "4", name: "Project Delta", status: "Archived", value: "$3,100" },
 ];
+
+function randIntensity(): 1 | 2 | 3 | 4 | 5 {
+  return (Math.floor(Math.random() * 5) + 1) as 1 | 2 | 3 | 4 | 5;
+}
+
+function buildBoxGridData(amount: number): BoxData[] {
+  return Array.from({ length: amount }, (_, i) => i).map((val) => {
+    return {
+      id: val.toString(),
+      intensity: randIntensity(),
+    };
+  });
+}
 
 function App() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -239,6 +253,16 @@ function App() {
             backdrop or the close button to dismiss.
           </p>
         </Dialog>
+      </Panel>
+
+      <h2>Box Grid</h2>
+      <Panel>
+        <h3>Color</h3>
+        <BoxGrid variant="color" data={buildBoxGridData(320)} />
+        <h3>Neutral</h3>
+        <BoxGrid variant="neutral" data={buildBoxGridData(132)} />
+        <h3>Fixed Columns</h3>
+        <BoxGrid variant="color" columns={5} data={buildBoxGridData(26)} />
       </Panel>
     </div>
   );
