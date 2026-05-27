@@ -8,8 +8,7 @@ import { Table, type TableColumn } from "../lib/components/table";
 import { Entry } from "../lib/components/entry";
 import { OtpEntry } from "../lib/components/otp-entry";
 import { Stack } from "../lib/components/stack";
-import { LoaderInline } from "../lib/components/loader-inline";
-import { PageLoader } from "../lib/components/loader-page";
+import { Loader } from "../lib/components/loader";
 import "../lib/root.css";
 import { type BoxData, BoxGrid } from "../lib/components/box-grid.tsx";
 
@@ -68,6 +67,7 @@ function App() {
   const [multilineValue, setMultilineValue] = useState("");
   const [otpNumeric, setOtpNumeric] = useState("");
   const [otpAlpha, setOtpAlpha] = useState("");
+  const [buttonShowsLoader, setButtonShowsLoader] = useState(false);
 
   return (
     <div className="catalogue">
@@ -202,27 +202,33 @@ function App() {
         </Stack>
       </Panel>
 
-      <h2>Inline Loader</h2>
+      <h2>Loader</h2>
       <Panel>
-        <h3>Variants</h3>
+        <h3>Small</h3>
         <div className="variant-row">
-          <LoaderInline />
-          <LoaderInline variant="primary" />
+          <Loader size="small" />
         </div>
 
         <h3>In a button</h3>
         <div className="variant-row">
-          <Button>
-            Saving <LoaderInline />
+          <Button showLoader>Saving</Button>
+          <Button variant="primary" showLoader>
+            Saving
           </Button>
-          <Button variant="primary">
-            Saving <LoaderInline variant="primary" />
+          <Button
+            showLoader={buttonShowsLoader}
+            onClick={() => setButtonShowsLoader(!buttonShowsLoader)}
+          >
+            Click me
           </Button>
         </div>
-      </Panel>
 
-      <h2>Page Loader</h2>
-      <PageLoader />
+        <h3>Large</h3>
+        <Loader size="large" />
+
+        <h3>Large (centered)</h3>
+        <Loader size="large" centered />
+      </Panel>
 
       <h2>Panel</h2>
       <Panel>

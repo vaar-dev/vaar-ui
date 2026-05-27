@@ -1,9 +1,11 @@
 import { type ReactNode } from "react";
 import "./button.css";
+import { Loader } from "./loader";
 
 export type ButtonProps = {
   variant?: "primary";
   size?: "small" | "small-icon" | "icon";
+  showLoader?: boolean;
   children?: ReactNode;
   onClick?: () => void;
 };
@@ -23,9 +25,18 @@ export function Button(props: ButtonProps) {
     className += " vaar-button-icon";
   }
 
+  const loaderVariant = props.variant === "primary" ? "light" : "color";
+
   return (
     <button className={className} onClick={props.onClick}>
-      {props.children}
+      <span className={props.showLoader ? "vaar-button-content-hidden" : ""}>
+        {props.children}
+      </span>
+      {props.showLoader && (
+        <span className="vaar-button-loader">
+          <Loader size="button" variant={loaderVariant} />
+        </span>
+      )}
     </button>
   );
 }

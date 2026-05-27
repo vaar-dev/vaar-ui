@@ -1,0 +1,18 @@
+.vaar-loader {
+  display: inline-flex;
+}
+
+.vaar-loader .vaar-box-grid-box {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.vaar-loader-small .vaar-box-grid {
+  --vaar-box-grid-base-size: 8px;
+}
+
+.vaar-loader-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--vaar-size-large);
+}

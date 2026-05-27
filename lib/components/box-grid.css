@@ -1,18 +1,22 @@
 .vaar-box-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: var(--vaar-size-small);
+  --vaar-box-grid-base-size: 12px;
 }
 
 .vaar-box-grid-fixed {
   display: grid;
-  grid-template-columns: repeat(var(--vaar-box-grid-columns), 12px);
-  gap: 3px;
+  grid-template-columns: repeat(
+    var(--vaar-box-grid-columns),
+    var(--vaar-box-grid-base-size)
+  );
+  gap: var(--vaar-size-small);
 }
 
 .vaar-box-grid .vaar-box-grid-box {
-  width: 12px;
-  height: 12px;
+  width: var(--vaar-box-grid-base-size);
+  height: var(--vaar-box-grid-base-size);
 }
 
 .vaar-box-grid .vaar-box-grid-box.color {
@@ -23,6 +27,11 @@
 .vaar-box-grid .vaar-box-grid-box.neutral {
   --box-light: #ccc;
   --box-dark: #777;
+}
+
+.vaar-box-grid .vaar-box-grid-box.light {
+  --box-light: #ffffff;
+  --box-dark: #f5dbb5;
 }
 
 .vaar-box-grid .vaar-box-grid-box.intensity-1 {

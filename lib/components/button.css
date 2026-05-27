@@ -9,6 +9,10 @@
   transition: border-color 0.2s;
 }
 
+.vaar-button > * {
+  vertical-align: middle;
+}
+
 .vaar-button-primary {
   background: var(--vaar-color-orange);
 }
@@ -37,4 +41,20 @@
 .vaar-button-icon svg {
   width: var(--vaar-font-size);
   height: var(--vaar-font-size);
+}
+
+.vaar-button {
+  position: relative;
+}
+
+.vaar-button-content-hidden {
+  visibility: hidden;
+}
+
+.vaar-button-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

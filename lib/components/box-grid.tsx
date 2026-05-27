@@ -7,11 +7,11 @@ export type BoxData = {
 };
 
 type BoxProps = {
-  variant: "color" | "neutral";
+  variant: "color" | "neutral" | "light";
 } & BoxData;
 
 export type BoxGridProps = {
-  variant: "color" | "neutral";
+  variant: "color" | "neutral" | "light";
   columns?: number;
   data: BoxData[];
 };
@@ -24,6 +24,9 @@ export function Box(props: BoxProps) {
       break;
     case "neutral":
       className += " neutral";
+      break;
+    case "light":
+      className += " light";
       break;
   }
   className += " intensity-" + props.intensity.toString();
