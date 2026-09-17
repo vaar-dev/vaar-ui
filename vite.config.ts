@@ -9,8 +9,8 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      entryRoot: resolve(__dirname, "lib"),
-      tsconfigPath: resolve(__dirname, "tsconfig.lib.json"),
+      entryRoot: resolve(import.meta.dirname, "lib"),
+      tsconfigPath: resolve(import.meta.dirname, "tsconfig.lib.json"),
     }),
   ],
   build: {
